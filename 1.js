@@ -1,1 +1,3 @@
-console.log("Hello World!");
+function randomNumberInRange(x){
+	return Math.random()*x;
+}
