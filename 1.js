@@ -21,5 +21,3 @@ function randomPrimeGeneratorInRange(x){
 		}
 	}
 }
-
-console.log(randomPrimeGeneratorInRange(10))
