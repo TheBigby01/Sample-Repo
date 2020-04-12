@@ -8,16 +8,14 @@ function randomNumberWithDigit(n) {
   return x;
 }
 
-function isPrime(x) {
-  if (x < 2) return false;
-  for (i = 3; i < x; i++) if (x % i == 0) return false;
-  return true;
-}
-function randomPrimeGeneratorInRange(x) {
-  while (true) {
-    var y = Math.round(randomNumberInRange(x));
-    if (isPrime(y) == true) {
-      return y;
-    }
-  }
+function randomPrimeGeneratorInRange(x){
+	while(true){
+		var y = Math.random(randomNumberInRange(x));
+		if(y<2) continue;
+		if(y==2) return true;
+		var isPrime = true;
+		for(i=3;i<y;i++) if(y%i==0) {isPrime = false; break;}
+		if(isPrime) return y;
+		else continue;
+	}
 }
